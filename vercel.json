@@ -2,8 +2,11 @@
   "rewrites": [
     {
       "source": "/e/:slug",
-      "destination": "https://cqqnipzdmtfbmvsrbmso.supabase.co/functions/v1/event-og?slug=:slug"
+      "destination": "/api/e/:slug"
     },
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
