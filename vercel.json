@@ -2,14 +2,7 @@
   "rewrites": [
     {
       "source": "/e/:slug",
-      "destination": "https://cqqnipzdmtfbmvsrbmso.supabase.co/functions/v1/event-og?slug=:slug",
-      "has": [
-        {
-          "type": "header",
-          "key": "user-agent",
-          "value": ".*(facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegrambot|slackbot|discordbot|googlebot).*"
-        }
-      ]
+      "destination": "https://cqqnipzdmtfbmvsrbmso.supabase.co/functions/v1/event-og?slug=:slug"
     },
     { "source": "/(.*)", "destination": "/" }
   ]
