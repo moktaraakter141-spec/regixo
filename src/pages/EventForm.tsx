@@ -622,7 +622,7 @@ const EventForm = () => {
               size="sm"
               onClick={() => navigate("/dashboard")}
             >
-              <ArrowLeft className="mr-1 h-4 w-4" /> Back
+              <ArrowLeft className="mr-1 h-4 w-4" />
             </Button>
           </div>
         </header>
@@ -658,7 +658,7 @@ const EventForm = () => {
               size="sm"
               onClick={() => navigate("/dashboard")}
             >
-              <ArrowLeft className="mr-1 h-4 w-4" /> Back
+              <ArrowLeft className="mr-1 h-4  w-4" />
             </Button>
             {autoSaving && (
               <span className="hidden sm:inline text-xs text-muted-foreground animate-pulse">
@@ -671,33 +671,40 @@ const EventForm = () => {
               </span>
             )}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1">
             <Button
               variant={showPreview ? "secondary" : "ghost"}
               size="sm"
               onClick={() => setShowPreview((p) => !p)}
+              className="h-8 px-2.5 sm:px-3 text-xs gap-1.5"
             >
               {showPreview ? (
-                <EyeOff className="mr-1 h-4 w-4" />
+                <EyeOff className="h-3.5 w-3.5 shrink-0" />
               ) : (
-                <Eye className="mr-1 h-4 w-4" />
+                <Eye className="h-3.5 w-3.5 shrink-0" />
               )}
-              {showPreview ? "Hide" : "Preview"}
+              <span className="hidden sm:inline">
+                {showPreview ? "Hide" : "Preview"}
+              </span>
             </Button>
             <Button
               variant="outline"
               size="sm"
               disabled={mutation.isPending || !(form.title || "").trim()}
               onClick={() => mutation.mutate("draft")}
+              className="h-8 px-2.5 sm:px-3 text-xs gap-1.5"
             >
-              <Save className="mr-1 h-4 w-4" /> Draft
+              <Save className="h-3.5 w-3.5 shrink-0" />
+              <span className="hidden sm:inline">Draft</span>
             </Button>
             <Button
               size="sm"
               disabled={mutation.isPending || !(form.title || "").trim()}
               onClick={() => mutation.mutate("published")}
+              className="h-8 px-2.5 sm:px-3 text-xs gap-1.5"
             >
-              <Send className="mr-1 h-4 w-4" /> Publish
+              <Send className="h-3.5 w-3.5 shrink-0" />
+              <span className="">Publish</span>
             </Button>
           </div>
         </div>
