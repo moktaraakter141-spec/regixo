@@ -15,9 +15,9 @@ import { useState, useEffect } from "react";
 export interface NavItem {
   icon: any;
   label: string;
-  path?: string; // dashboard এর জন্য
-  tab?: string; // admin এর জন্য
-  onClick?: () => void; // custom action
+  path?: string;
+  tab?: string;
+  onClick?: () => void;
 }
 
 const DASHBOARD_NAV: NavItem[] = [
@@ -31,10 +31,10 @@ interface SidebarProps {
   open: boolean;
   onClose: () => void;
   navItems?: NavItem[];
-  activeTab?: string; // admin tab tracking এর জন্য
-  onTabChange?: (tab: string) => void; // admin tab change
-  title?: string; // "Regixo" বা "Admin Panel"
-  titleIcon?: any; // optional icon beside title
+  activeTab?: string;
+  onTabChange?: (tab: string) => void;
+  title?: string;
+  titleIcon?: any;
 }
 
 export const Sidebar = ({
@@ -95,7 +95,7 @@ export const Sidebar = ({
       {/* ── Sidebar ── */}
       <aside
         className={`
-          fixed lg:sticky top-0 left-0 z-50 h-screen flex flex-col shrink-0
+          fixed lg:sticky top-0 left-0 z-50 h-[100dvh] flex flex-col shrink-0
           border-r border-sidebar-border
           transition-all duration-300 ease-in-out
           w-60
@@ -184,7 +184,7 @@ export const Sidebar = ({
         </nav>
 
         {/* ── User Footer ── */}
-        <div className="p-2 border-t border-sidebar-border shrink-0">
+        <div className="mt-auto p-2 border-t border-sidebar-border shrink-0">
           <div
             className={`flex items-center gap-3 rounded-lg px-2 py-2 transition-colors hover:bg-sidebar-accent/30 ${collapsed ? "lg:flex-col lg:px-0" : ""}`}
           >
