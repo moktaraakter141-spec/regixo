@@ -42,7 +42,14 @@ const TicketPDF = ({ registration, event }: TicketPDFProps) => {
 
   return (
     <div className="space-y-4">
-      {/* Downloadable ticket card — সব কিছু এই div-এর ভেতরে */}
+      {/* Download button — উপরে, PNG-তে আসবে না */}
+      <div className="flex justify-center">
+        <Button onClick={downloadImage} className="gap-2 w-full max-w-xs">
+          <Download className="h-4 w-4" /> Download Ticket
+        </Button>
+      </div>
+
+      {/* Ticket card */}
       <div
         ref={ticketRef}
         className="bg-white text-gray-900 p-6 rounded-xl max-w-md mx-auto"
@@ -134,7 +141,7 @@ const TicketPDF = ({ registration, event }: TicketPDFProps) => {
           <p className="text-[10px] text-gray-400 mt-2">Scan to verify</p>
         </div>
 
-        {/* Powered by — ticketRef ভেতরে, PNG-তে আসবে */}
+        {/* Powered by */}
         <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-center gap-1.5">
           <span className="text-[9px] tracking-widest text-gray-300 font-medium">
             Powered by
@@ -143,13 +150,6 @@ const TicketPDF = ({ registration, event }: TicketPDFProps) => {
             Regixo
           </span>
         </div>
-      </div>
-
-      {/* Download button — ticketRef বাইরে */}
-      <div className="flex justify-center">
-        <Button onClick={downloadImage} className="gap-2">
-          <Download className="h-4 w-4" /> Download Ticket
-        </Button>
       </div>
     </div>
   );
