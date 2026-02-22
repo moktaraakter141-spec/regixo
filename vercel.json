@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/events/:id",
-      "destination": "https://cqqnipzdmtfbmvsrbmso.supabase.co/functions/v1/event-og?id=:id",
+      "source": "/e/:slug",
+      "destination": "https://cqqnipzdmtfbmvsrbmso.supabase.co/functions/v1/event-og?slug=:slug",
       "has": [
         {
           "type": "header",
