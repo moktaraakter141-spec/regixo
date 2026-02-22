@@ -546,8 +546,18 @@ export default function Index() {
           .hero-corner-bl,.hero-corner-br { bottom: 52px; width: 40px; height: 40px; }
           .hero-corner-tl,.hero-corner-bl { left: 16px; }
           .hero-corner-tr,.hero-corner-br { right: 16px; }
-          .hero-h1 { font-size: clamp(2.2rem, 10.5vw, 3.5rem); letter-spacing: -.04em; }
-          .hero-sub { font-size: .875rem; max-width: 100%; }
+          .hero-h1 {
+  font-size: clamp(2.6rem, 8.5vw, 7rem);
+  font-weight: 500; line-height: 1.08; letter-spacing: -.05em;
+  color: #111; max-width: 860px; margin: 0 auto;
+  font-family: 'Siliguri', 'NeueMachina', sans-serif;
+}
+          .hero-sub {
+  font-size: clamp(.875rem, 1.8vw, 1rem);
+  font-weight: 400; color: #777; line-height: 1.75;
+  max-width: 420px; margin: 22px auto 0;
+  font-family: 'Siliguri', 'Manrope', sans-serif;
+}
           .hero-btns { flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; }
           .btn-d, .btn-l { width: 100%; max-width: 280px; justify-content: center; }
           .hero-highlights { flex-direction: column; border-radius: 12px; margin-top: 32px; }
