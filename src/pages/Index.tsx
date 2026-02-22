@@ -353,17 +353,6 @@ export default function Index() {
         .hero-dot { width: 5px; height: 5px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
         @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
 
-        .hero-h1 {
-          font-size: clamp(2.6rem, 8.5vw, 7rem);
-          font-weight: 500; line-height: 1.08; letter-spacing: -.05em;
-          color: #111; max-width: 860px; margin: 0 auto;
-        }
-        .hero-sub {
-          font-size: clamp(.875rem, 1.8vw, 1rem);
-          font-weight: 400; color: #777; line-height: 1.75;
-          max-width: 420px; margin: 22px auto 0;
-        }
-
         /* ── BUTTONS ── */
         .hero-btns {
           display: flex; gap: 8px; justify-content: center;
@@ -519,6 +508,19 @@ export default function Index() {
           flex-shrink: 0; color: rgba(255,255,255,.5);
         }
 
+        .hero-h1 {
+  font-size: clamp(2.6rem, 8.5vw, 7rem);
+  font-weight: 500; line-height: 1.08; letter-spacing: -.05em;
+  color: #111; max-width: 860px; margin: 0 auto;
+  font-family: 'Siliguri', 'NeueMachina', sans-serif;
+}
+
+.hero-sub {
+  font-size: clamp(.875rem, 1.8vw, 1rem);
+  font-weight: 400; color: #777; line-height: 1.75;
+  max-width: 420px; margin: 22px auto 0;
+  font-family: 'Siliguri', 'Manrope', sans-serif;
+}
         /* ── FOOTER ── */
         .footer { border-top: 1px solid #ebebeb; padding: 24px; }
         .footer-in { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
@@ -546,18 +548,8 @@ export default function Index() {
           .hero-corner-bl,.hero-corner-br { bottom: 52px; width: 40px; height: 40px; }
           .hero-corner-tl,.hero-corner-bl { left: 16px; }
           .hero-corner-tr,.hero-corner-br { right: 16px; }
-          .hero-h1 {
-  font-size: clamp(2.6rem, 8.5vw, 7rem);
-  font-weight: 500; line-height: 1.08; letter-spacing: -.05em;
-  color: #111; max-width: 860px; margin: 0 auto;
-  font-family: 'Siliguri', 'NeueMachina', sans-serif;
-}
-          .hero-sub {
-  font-size: clamp(.875rem, 1.8vw, 1rem);
-  font-weight: 400; color: #777; line-height: 1.75;
-  max-width: 420px; margin: 22px auto 0;
-  font-family: 'Siliguri', 'Manrope', sans-serif;
-}
+          .hero-h1 { font-size: clamp(2.2rem, 10.5vw, 3.5rem); letter-spacing: -.04em; }
+          .hero-sub { font-size: .875rem; max-width: 100%; }
           .hero-btns { flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; }
           .btn-d, .btn-l { width: 100%; max-width: 280px; justify-content: center; }
           .hero-highlights { flex-direction: column; border-radius: 12px; margin-top: 32px; }
